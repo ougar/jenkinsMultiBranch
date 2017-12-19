@@ -4,6 +4,6 @@ node {
   }
   stage('Run') {
     sh "echo Run"
-    Rscript test.R
+    sh "Rscript test.R"
   }
 }
