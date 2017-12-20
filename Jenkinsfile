@@ -1,4 +1,7 @@
 node {
+  stage('Checkout') {
+    checkout scm
+  }
   stage('Test') {
     sh "echo Test"
     sh "ls -la"
