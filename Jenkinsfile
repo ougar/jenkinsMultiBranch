@@ -6,8 +6,11 @@ node {
     sh "echo Test"
     sh "ls -la"
   }
+  stage('Build') {
+    sh "docker build -t rtest1 ."
+  }
   stage('Run') {
     sh "echo Run"
-    sh "Rscript test.R"
+    sh "docker run rtest1"
   }
 }
